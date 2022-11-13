@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="62.802">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="4.676">
+        <system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email "test56@example.com" field.............................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="4.061">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "valid" "test@example.com" and "P@ssw0rd"..............passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="3.39">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "invalid" "wrong@example.com" and "P@ssw0rd"...........passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F03_currencies | user should be able to change the currency correctly" name="user changing the currency to change the currency of the product" time="2.389">
+        <system-out><![CDATA[When user chooses currency..................................................passed
+Then the Euro sign is visible...............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_search | user should be able to search for products with either name of SKU" name="user searches with a product name" time="2.436">
+        <system-out><![CDATA[Given user presses at search................................................passed
+When user enters "Nikon" in search..........................................passed
+And presses on the search button............................................passed
+Then user could search using name successfully..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_search | user should be able to search for products with either name of SKU" name="user searches with a product name 2" time="2.434">
+        <system-out><![CDATA[Given user presses at search................................................passed
+When user enters "Apple" in search..........................................passed
+And presses on the search button............................................passed
+Then user could search using name successfully..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_search | user should be able to search for products with either name of SKU" name="user searches with a product name 3" time="2.962">
+        <system-out><![CDATA[Given user presses at search................................................passed
+When user enters "Book" in search...........................................passed
+And presses on the search button............................................passed
+Then user could search using name successfully..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_search | user should be able to search for products with either name of SKU" name="user searching with SKU" time="3.71">
+        <system-out><![CDATA[Given user presses at search................................................passed
+When user enters "AP_MBP_13" in search......................................passed
+And presses on the search button............................................passed
+And user clicks on the product in search result.............................passed
+Then user could search using "AP_MBP_13" successfully.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_search | user should be able to search for products with either name of SKU" name="user searching with SKU 2" time="3.911">
+        <system-out><![CDATA[Given user presses at search................................................passed
+When user enters "SF_PRO_11" in search......................................passed
+And presses on the search button............................................passed
+And user clicks on the product in search result.............................passed
+Then user could search using "SF_PRO_11" successfully.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_search | user should be able to search for products with either name of SKU" name="user searching with SKU 3" time="3.816">
+        <system-out><![CDATA[Given user presses at search................................................passed
+When user enters "APPLE_CAM" in search......................................passed
+And presses on the search button............................................passed
+And user clicks on the product in search result.............................passed
+Then user could search using "APPLE_CAM" successfully.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F05 | user should be able to select any sub-category appropriately" name="user should be able to hover categories and select sub-categories" time="4.626">
+        <system-out><![CDATA[When user hovers electronics category.......................................passed
+And user selects Cell phones sub-category...................................passed
+Then user should go to the sub category page successfully...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F06 | clicking the home sliders" name="clicking the nokia home slider should direct to the appropriate URL" time="2.481">
+        <failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on the nokia slider........................................passed
+Then the user should be directed to the correct nokia product...............failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefinitions.D06_homeSlidersStepDef.the_user_should_be_directed_to_the_correct_nokia_product(D06_homeSlidersStepDef.java:21)
+	at ✽.the user should be directed to the correct nokia product(file:///C:/Users/pc/Desktop/ecommerce_cucumber_automation_project/src/main/resources/features/F06_homeSliders.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="F06 | clicking the home sliders" name="clicking the iphone home slider should direct to the appropriate URL" time="2.476">
+        <failure message="expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on the iphone slider.......................................passed
+Then the user should be directed to the correct iphone product..............failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefinitions.D06_homeSlidersStepDef.the_user_should_be_directed_to_the_correct_iphone_product(D06_homeSlidersStepDef.java:32)
+	at ✽.the user should be directed to the correct iphone product(file:///C:/Users/pc/Desktop/ecommerce_cucumber_automation_project/src/main/resources/features/F06_homeSliders.feature:8)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="3.888">
+        <system-out><![CDATA[When user opens "facebook" link.............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="3.006">
+        <system-out><![CDATA[When user opens "twitter" link..............................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens rss link" time="2.386">
+        <failure message="Index 1 out of bounds for length 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user opens "rss" link..................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.stepDefinitions.D07_followUsStepDef.user(D07_followUsStepDef.java:21)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab(file:///C:/Users/pc/Desktop/ecommerce_cucumber_automation_project/src/main/resources/features/F07_followUs.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="5.826">
+        <system-out><![CDATA[When user opens "youtube" link..............................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F08 | wishlist feature" name="scenario 1 wishlist" time="2.038">
+        <system-out><![CDATA[When user adds a product to the wishlist....................................passed
+Then the corresponding product should be added to the wishlist..............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F08 | wishlist feature" name="scenario 2 wishlist" time="2.054">
+        <system-out><![CDATA[When user adds a product to the wishlist....................................passed
+Then the corresponding product should be added to the wishlist..............passed
+And the number of items in the list is updated..............................passed
+]]></system-out>
+    </testcase>
+</testsuite>
